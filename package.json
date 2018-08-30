@@ -1,0 +1,9 @@
+{
+  "name": "react-native-xhr-fetch",
+  "version": "0.0.1",
+  "description": "Drop in replacement for fetch that allows much finer control via the XMLHttpRequest api",
+  "main": "index.js",
+  "repository": "https://github.com/Jahans3/react-native-xhr-fetch",
+  "author": "Joshua Jahans <josh.jahans3@gmail.com>",
+  "license": "MIT"
+}
