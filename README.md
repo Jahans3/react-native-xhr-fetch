@@ -25,6 +25,7 @@ class MyComponent extends React.Component {
     async makeRequestWithOwnXHR () {
         this._xhr = new XMLHttpRequest();
 
+        // Calling xhrFetch will both open and send the request
         const response = await responsePromise: xhrFetch('https://my-api.mysite.com', {
             method: 'GET',
             XHR: myXhr // Pass your instance - this is completely optional, will create own instance if none if passed
@@ -33,6 +34,10 @@ class MyComponent extends React.Component {
         this.setState({
             data: await response.json() // Parse the response
         })
+    }
+
+    componentDidMount () {
+        this.makeRequestWithOwnXHR();
     }
 
     componentWillUnmount () {
